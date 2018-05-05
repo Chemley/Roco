@@ -13,8 +13,9 @@ public class TacoTruckTest {
         assertEquals("Taco Truck!",tacoTruck.getTitle());
         assertTrue(tacoTruck.isVisible());
         assertEquals(JFrame.EXIT_ON_CLOSE,tacoTruck.getDefaultCloseOperation());
-        assertEquals(600,tacoTruck.getWidth());
-        assertEquals(200,tacoTruck.getHeight());
+//        assertEquals(600,tacoTruck.getWidth());
+//        assertEquals(200,tacoTruck.getHeight());
+        assertEquals("Grid Layout Demo", tacoTruck.getName());
     }
 
 }
