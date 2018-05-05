@@ -45,7 +45,5 @@ public class PresenterTest {
         tacoButton.doClick();
         assertEquals("Order Screen", presenter.getCurrentScreen().getName());
 
-        TODO add new order to model and add taco to order. 
-
     }*/
 }
