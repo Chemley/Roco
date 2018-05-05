@@ -6,17 +6,17 @@ import java.awt.event.ActionListener;
 
 public class Presenter {
 
+    private final OrderScreenGrid orderScreen;
     private TacoTruck view;
-    private TacoTruckWelcomePanel welcomeScreen;
     public Presenter(TacoTruck view) {
         this.view = view;
+        this.orderScreen = new OrderScreenGrid();
         setUp();
     }
 
     private void setUp(){
-        welcomeScreen = new TacoTruckWelcomePanel();
-        welcomeScreen.getStartButton().addActionListener(new StartButtonActionListener());
-        setCurrentScreen(welcomeScreen);
+
+        setCurrentScreen(orderScreen);
     }
 
     public TacoTruck getView() {

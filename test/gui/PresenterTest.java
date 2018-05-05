@@ -2,6 +2,7 @@ package gui;
 import gui.Presenter;
 import gui.TacoTruck;
 import gui.TacoTruckWelcomePanel;
+import gui.OrderScreenGrid;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -27,7 +28,7 @@ public class PresenterTest {
         Container currentScreen = presenter.getCurrentScreen();
 
         assertEquals(view,presenter.getView());
-        assertEquals("TacoTruckWelcomePanel", currentScreen.getName());
+        assertEquals("Order Screen", currentScreen.getName());
         assertEquals(currentScreen, presenter.getView().getContentPane());
     }
 
@@ -37,4 +38,14 @@ public class PresenterTest {
         startButton.doClick();
         assertEquals("TacoTruckOrderPanel",presenter.getCurrentScreen().getName());
     }
+
+/*    @Test
+    public void tacoButton_onClick_AddsTaco() {
+        JButton tacoButton = ((OrderScreenGrid) presenter.getCurrentScreen()).getTacoButton();
+        tacoButton.doClick();
+        assertEquals("Order Screen", presenter.getCurrentScreen().getName());
+
+        TODO add new order to model and add taco to order. 
+
+    }*/
 }
