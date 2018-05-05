@@ -1,3 +1,5 @@
+package gui;
+import gui.TacoTruckWelcomePanel;
 import org.junit.Test;
 
 import javax.swing.*;

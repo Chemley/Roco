@@ -1,5 +1,6 @@
+package gui;
 import javax.swing.*;
-import java.lang.management.BufferPoolMXBean;
+
 
 public class TacoTruckWelcomePanel extends JPanel {
 

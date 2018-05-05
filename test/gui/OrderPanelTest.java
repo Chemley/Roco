@@ -1,4 +1,5 @@
-
+package gui;
+import gui.OrderPanel;
 import org.junit.Test;
 
 import javax.swing.*;

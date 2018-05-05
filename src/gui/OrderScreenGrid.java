@@ -1,4 +1,7 @@
+package gui;
+
 import javax.swing.*;
+
 
 public class OrderScreenGrid extends JPanel {
 
