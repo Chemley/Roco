@@ -41,7 +41,7 @@ public class Presenter {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            setCurrentScreen(new OrderPanel());
+            setCurrentScreen(new OrderScreenGrid());
         }
     }
 }
