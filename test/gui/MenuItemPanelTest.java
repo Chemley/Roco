@@ -30,12 +30,5 @@ public class MenuItemPanelTest {
         assertEquals("Taco Button", tacoButton.getName());
         assertEquals("Taco Button", tacoButton.getText());
     }
-
-//    @Test
-//    public void addDillaButton(){
-//        JButton tacoButton = ((JButton) orderScreenGrid.getComponents()[0]);
-//        assertEquals(tacoButton, orderScreenGrid.getTacoButton());
-//        assertEquals("Taco Button", tacoButton.getName());
-//        assertEquals("Taco Button", tacoButton.getText());
-//    }
+    
 }
