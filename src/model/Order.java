@@ -1,4 +1,5 @@
-import com.sun.org.apache.xpath.internal.operations.Or;
+package model;
+import model.ConsumableItem;
 
 import java.time.LocalDateTime;
 import java.util.LinkedList;

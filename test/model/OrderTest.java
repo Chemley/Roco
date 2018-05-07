@@ -1,3 +1,9 @@
+package model;
+
+import model.Coke;
+import model.Horchata;
+import model.Quesadilla;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -18,7 +24,7 @@ public class OrderTest {
     public void testOrderInventory() {
         Taco taco = new Taco();
         order.addItem(taco);
-        assertEquals(1,order.getOrderSize());
+        Assert.assertEquals(1,order.getOrderSize());
     }
 
     @Test
@@ -29,7 +35,7 @@ public class OrderTest {
         order.addItem(firstTaco);
         order.addItem(secondTaco);
 
-        assertEquals(2, order.getOrderSize());
+        Assert.assertEquals(2, order.getOrderSize());
     }
 
     @Test
@@ -43,21 +49,21 @@ public class OrderTest {
         order.addItem(secondTaco);
         order.addItem(coke);
 
-        assertEquals(firstTaco, order.getItem(0));
-        assertEquals( secondTaco, order.getItem(1) );
-        assertEquals( coke, order.getItem(2) );
+        Assert.assertEquals(firstTaco, order.getItem(0));
+        Assert.assertEquals( secondTaco, order.getItem(1) );
+        Assert.assertEquals( coke, order.getItem(2) );
     }
 
     @Test
     public void testOrderDefaults() {
-        assertEquals(0, order.getOrderSize());
+        Assert.assertEquals(0, order.getOrderSize());
     }
 
     @Test
     public void testOrderHasName() {
         Order namedOrder = new Order("Sam");
-        assertEquals("Sam", namedOrder.getCustomerName());
-        assertEquals("customer name", order.getCustomerName());
+        Assert.assertEquals("Sam", namedOrder.getCustomerName());
+        Assert.assertEquals("customer name", order.getCustomerName());
     }
 
     @Test
@@ -72,15 +78,15 @@ public class OrderTest {
 
     @Test
     public void testReceiptDefaults() {
-        assertEquals(0.06, order.getTaxRate(),0);
-        assertEquals(0.0, order.getTipAmount(),0);
-        assertEquals(0.0, order.getSubtotal(), 0 );
+        Assert.assertEquals(0.06, order.getTaxRate(),0);
+        Assert.assertEquals(0.0, order.getTipAmount(),0);
+        Assert.assertEquals(0.0, order.getSubtotal(), 0 );
     }
 
     @Test
     public void testAddedItemsAddToTotal(){
         order.addItem(new Quesadilla());
-        assertEquals(5, order.getSubtotal(),0);
+        Assert.assertEquals(5, order.getSubtotal(),0);
     }
 
     @Test
@@ -89,7 +95,7 @@ public class OrderTest {
         order.addItem(taco);
         order.addItem(taco);
         order.addItem(taco);
-        assertEquals(1.50, order.getDiscountAmount(), 0);
+        Assert.assertEquals(1.50, order.getDiscountAmount(), 0);
     }
 
     @Test
@@ -98,7 +104,7 @@ public class OrderTest {
         order.addItem(taco);
         order.addItem(taco);
         order.addItem(new Coke());
-        assertEquals(0, order.getDiscountAmount(), 0);
+        Assert.assertEquals(0, order.getDiscountAmount(), 0);
     }
 
     @Test
@@ -113,7 +119,7 @@ public class OrderTest {
 
         order.addItem(new Horchata());
 
-        assertEquals(expectedTotal, order.getTotal(), 0);
+        Assert.assertEquals(expectedTotal, order.getTotal(), 0);
     }
 
     @Test
@@ -125,7 +131,7 @@ public class OrderTest {
        order.addItem(taco);
        order.addItem(new Coke());
 
-       assertEquals(expectedTotal, order.getTotal(),0);
+       Assert.assertEquals(expectedTotal, order.getTotal(),0);
     }
 
     @Test
@@ -140,7 +146,7 @@ public class OrderTest {
     @Test
     public void testTipSetter(){
         order.setTipAmount(2);
-        assertEquals(2,order.getTipAmount(),0);
+        Assert.assertEquals(2,order.getTipAmount(),0);
     }
 
 }

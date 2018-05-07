@@ -1,3 +1,6 @@
+package model;
+
+import model.Ice;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

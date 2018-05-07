@@ -1,3 +1,7 @@
+package model;
+
+import model.Coke;
+import model.Ice;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -1,3 +1,7 @@
+package model;
+
+import model.Beverage;
+
 public class Coke extends Beverage {
     public Coke()  {
         super(1.75);

@@ -1,3 +1,5 @@
+package model;
+
 public abstract class ConsumableItem {
 
     private double unitPrice;

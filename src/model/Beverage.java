@@ -1,3 +1,5 @@
+package model;
+
 public abstract class Beverage extends ConsumableItem {
 
     private boolean isDiet = false;

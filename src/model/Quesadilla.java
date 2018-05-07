@@ -1,4 +1,8 @@
-public class Quesadilla extends ConsumableItem{
+package model;
+
+import model.ConsumableItem;
+
+public class Quesadilla extends ConsumableItem {
 
     private boolean hasMeat = false;
 

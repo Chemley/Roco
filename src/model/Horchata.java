@@ -1,3 +1,7 @@
+package model;
+
+import model.Beverage;
+
 public class Horchata extends Beverage {
 
     public Horchata() {

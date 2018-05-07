@@ -1,3 +1,6 @@
+package model;
+
+import model.Cashier;
 import org.junit.Before;
 import org.junit.Test;
 

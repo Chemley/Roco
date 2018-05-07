@@ -1,3 +1,6 @@
+package model;
+
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -14,7 +17,7 @@ public class TacoTest {
 
     @Test
     public void taco_hasUnitPrice(){
-        assertEquals(3,taco.getUnitPrice(),0);
+        Assert.assertEquals(3,taco.getUnitPrice(),0);
     }
 
     @Test
@@ -26,6 +29,6 @@ public class TacoTest {
     public void taco_canAddGuac(){
         taco.addGuacamole();
         assertTrue(taco.hasGuacamole());
-        assertEquals(3.75, taco.getUnitPrice(), 0);
+        Assert.assertEquals(3.75, taco.getUnitPrice(), 0);
     }
 }

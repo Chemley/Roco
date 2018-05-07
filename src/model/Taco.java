@@ -1,4 +1,8 @@
-public class Taco extends ConsumableItem{
+package model;
+
+import model.ConsumableItem;
+
+public class Taco extends ConsumableItem {
     private boolean hasGuacamole = false;
 
     public Taco() {

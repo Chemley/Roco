@@ -30,5 +30,5 @@ public class MenuItemPanelTest {
         assertEquals("Taco Button", tacoButton.getName());
         assertEquals("Taco Button", tacoButton.getText());
     }
-    
+
 }

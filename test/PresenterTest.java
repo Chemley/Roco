@@ -1,8 +1,6 @@
-package gui;
-import gui.Presenter;
-import gui.TacoTruck;
-import gui.TacoTruckWelcomePanel;
+import Presenter;
 import gui.MenuItemPanel;
+import gui.TacoTruck;
 import org.junit.Before;
 import org.junit.Test;
 
