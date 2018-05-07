@@ -1,5 +1,5 @@
 package gui;
-import gui.OrderScreenGrid;
+import gui.MenuItemPanel;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -8,25 +8,25 @@ import javax.swing.*;
 import static org.junit.Assert.*;
 
 
-public class OrderScreenGridTest {
+public class MenuItemPanelTest {
 
-    private OrderScreenGrid orderScreenGrid;
+    private MenuItemPanel menuItemPanel;
 
     @Before
-    public void setUpForOrderScreen(){
-        orderScreenGrid = new OrderScreenGrid();
+    public void setUpForMenuItemPanel(){
+        menuItemPanel = new MenuItemPanel();
     }
 
     @Test
-    public void nameOfOrderScreenGrid() {
-        assertEquals("Order Screen",orderScreenGrid.getName());
+    public void nameOfMenuItemPanel() {
+        assertEquals("Order Screen",menuItemPanel.getName());
 
     }
 
     @Test
     public void addTacoButton(){
-        JButton tacoButton = ((JButton) orderScreenGrid.getComponents()[0]);
-        assertEquals(tacoButton, orderScreenGrid.getTacoButton());
+        JButton tacoButton = ((JButton) menuItemPanel.getComponents()[0]);
+        assertEquals(tacoButton, menuItemPanel.getTacoButton());
         assertEquals("Taco Button", tacoButton.getName());
         assertEquals("Taco Button", tacoButton.getText());
     }

@@ -6,11 +6,11 @@ import java.awt.event.ActionListener;
 
 public class Presenter {
 
-    private final OrderScreenGrid orderScreen;
+    private final MenuItemPanel orderScreen;
     private TacoTruck view;
     public Presenter(TacoTruck view) {
         this.view = view;
-        this.orderScreen = new OrderScreenGrid();
+        this.orderScreen = new MenuItemPanel();
         setUp();
     }
 
@@ -41,7 +41,7 @@ public class Presenter {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            setCurrentScreen(new OrderScreenGrid());
+            setCurrentScreen(new TacoTruckWelcomePanel());
         }
     }
 }

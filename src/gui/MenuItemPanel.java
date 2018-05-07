@@ -3,11 +3,11 @@ package gui;
 import javax.swing.*;
 
 
-public class OrderScreenGrid extends JPanel {
+public class MenuItemPanel extends JPanel {
 
     private JButton tacoButton = new JButton();
 
-    public OrderScreenGrid() {
+    public MenuItemPanel() {
         this.setName("Order Screen");
         this.tacoButton.setName("Taco Button");
         this.tacoButton.setText("Taco Button");
@@ -23,5 +23,5 @@ public class OrderScreenGrid extends JPanel {
 //       frame.setLayout(grid);
 //        frame.setVisible(true);
 
- }
+}
 

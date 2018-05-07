@@ -2,7 +2,7 @@ package gui;
 import gui.Presenter;
 import gui.TacoTruck;
 import gui.TacoTruckWelcomePanel;
-import gui.OrderScreenGrid;
+import gui.MenuItemPanel;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -32,18 +32,18 @@ public class PresenterTest {
         assertEquals(currentScreen, presenter.getView().getContentPane());
     }
 
-    @Test
+ /*   @Test
     public void startButton_onClick_GoesToOrderScreen(){
         JButton startButton = ((TacoTruckWelcomePanel) presenter.getCurrentScreen()).getStartButton();
         startButton.doClick();
         assertEquals("TacoTruckOrderPanel",presenter.getCurrentScreen().getName());
     }
-
-/*    @Test
+*/
+    @Test
     public void tacoButton_onClick_AddsTaco() {
-        JButton tacoButton = ((OrderScreenGrid) presenter.getCurrentScreen()).getTacoButton();
+        JButton tacoButton = ((MenuItemPanel) presenter.getCurrentScreen()).getTacoButton();
         tacoButton.doClick();
         assertEquals("Order Screen", presenter.getCurrentScreen().getName());
 
-    }*/
+    }
 }
