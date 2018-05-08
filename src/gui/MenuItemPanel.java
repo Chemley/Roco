@@ -8,7 +8,7 @@ public class MenuItemPanel extends JPanel {
     private JButton tacoButton = new JButton();
 
     public MenuItemPanel() {
-        this.setName("Order Screen");
+        this.setName("Menu Item Panel");
         this.tacoButton.setName("Taco Button");
         this.tacoButton.setText("Taco Button");
         this.add(tacoButton);

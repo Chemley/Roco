@@ -1,6 +1,7 @@
-import Presenter;
+
 import gui.MenuItemPanel;
 import gui.TacoTruck;
+import model.Cashier;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -16,27 +17,28 @@ public class PresenterTest {
 
     @Before
     public void setUp(){
-        presenter = new Presenter(new TacoTruck());
+        presenter = new Presenter(new TacoTruck(), new Cashier());
     }
 
     @Test
     public void presenter_initializesTruckWithStartScreen(){
         TacoTruck view = new TacoTruck();
-        presenter = new Presenter(view);
+        Cashier model = new Cashier();
+        Presenter presenter = new Presenter(view, model);
         Container currentScreen = presenter.getCurrentScreen();
 
         assertEquals(view,presenter.getView());
-        assertEquals("Order Screen", currentScreen.getName());
+        assertEquals("Menu Item Panel", currentScreen.getName());
         assertEquals(currentScreen, presenter.getView().getContentPane());
     }
 
- /*   @Test
+/*    @Test
     public void startButton_onClick_GoesToOrderScreen(){
         JButton startButton = ((TacoTruckWelcomePanel) presenter.getCurrentScreen()).getStartButton();
         startButton.doClick();
         assertEquals("TacoTruckOrderPanel",presenter.getCurrentScreen().getName());
-    }
-*/
+    }*/
+
     @Test
     public void tacoButton_onClick_AddsTaco() {
         JButton tacoButton = ((MenuItemPanel) presenter.getCurrentScreen()).getTacoButton();
