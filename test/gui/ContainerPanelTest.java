@@ -28,4 +28,11 @@ public class ContainerPanelTest {
         assertEquals("Menu Item Panel",items[0].getName());
 
     }
+
+    @Test
+    public void canHoldSecondPanel () {
+        Component[] items = containerPanel.getComponents();
+        assertEquals("Receipt Panel",items[1].getName());
+
+    }
 }
