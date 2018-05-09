@@ -28,7 +28,7 @@ public class PresenterTest {
         Container currentScreen = presenter.getCurrentScreen();
 
         assertEquals(view,presenter.getView());
-        assertEquals("Menu Item Panel", currentScreen.getName());
+        assertEquals("Container Panel", currentScreen.getName());
         assertEquals(currentScreen, presenter.getView().getContentPane());
     }
 
@@ -39,11 +39,11 @@ public class PresenterTest {
         assertEquals("TacoTruckOrderPanel",presenter.getCurrentScreen().getName());
     }*/
 
-    @Test
+/*    @Test
     public void tacoButton_onClick_AddsTaco() {
         JButton tacoButton = ((MenuItemPanel) presenter.getCurrentScreen()).getTacoButton();
         tacoButton.doClick();
         assertEquals("Order Screen", presenter.getCurrentScreen().getName());
 
-    }
+    }*/
 }

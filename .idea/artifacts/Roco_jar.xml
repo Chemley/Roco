@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Roco:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Roco_jar</output-path>
+    <root id="archive" name="Roco.jar">
+      <element id="module-output" name="Roco" />
+    </root>
+  </artifact>
+</component>

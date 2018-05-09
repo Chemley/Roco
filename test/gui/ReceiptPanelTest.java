@@ -16,8 +16,7 @@ public class ReceiptPanelTest {
 
     @Test
     public void nameOfOrderScreenGrid() {
-        assertEquals("Receipt Panel", receiptPanel.getName());
+        assertEquals("Receipt Panel", receiptPanel.getName()); }
 
-    }
 
 }

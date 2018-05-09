@@ -1,6 +1,7 @@
 package gui;
 
 import javax.swing.*;
+import java.awt.*;
 
 
 public class ReceiptPanel extends JPanel {
@@ -12,6 +13,7 @@ public class ReceiptPanel extends JPanel {
         this.tacoButton.setName("Taco Button");
         this.tacoButton.setText("Taco Button");
         this.add(tacoButton);
+        this.setBackground(Color.CYAN);
     }
 
     public JButton getTacoButton() {

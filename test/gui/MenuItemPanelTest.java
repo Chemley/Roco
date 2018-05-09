@@ -19,7 +19,7 @@ public class MenuItemPanelTest {
 
     @Test
     public void nameOfMenuItemPanel() {
-        assertEquals("Order Screen",menuItemPanel.getName());
+        assertEquals("Menu Item Panel",menuItemPanel.getName());
 
     }
 

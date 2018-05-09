@@ -2,6 +2,7 @@ import gui.MenuItemPanel;
 import gui.TacoTruck;
 import gui.TacoTruckWelcomePanel;
 import model.Cashier;
+import gui.ContainerPanel;
 import model.Order;
 
 import javax.swing.*;
@@ -11,20 +12,20 @@ import java.awt.event.ActionListener;
 
 public class Presenter {
 
-    private final MenuItemPanel orderScreen;
+    private final ContainerPanel containerPanel;
     private TacoTruck view;
     private Cashier model;
 
     public Presenter(TacoTruck view, Cashier model) {
         this.view = view;
         this.model = model;
-        this.orderScreen = new MenuItemPanel();
+        this.containerPanel = new ContainerPanel();
         setUp();
     }
 
     private void setUp(){
 
-        setCurrentScreen(orderScreen);
+        setCurrentScreen(containerPanel);
     }
 
     public TacoTruck getView() {
