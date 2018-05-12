@@ -10,6 +10,7 @@ public class ReceiptPanel extends JPanel {
     JLabel subtotalField = new JLabel("Subtotal: $0.00");
     JLabel taxField = new JLabel("Tax: $0.00");
     JLabel totalField = new JLabel("Total: $0.00");
+    JLabel discountAmountField = new JLabel ("Discount Amount: $0.00");
     JPanel itemsList = new JPanel();
     JPanel taxTotalPanel = new JPanel();
 
@@ -22,7 +23,7 @@ public class ReceiptPanel extends JPanel {
         taxTotalPanel.setLayout(new BoxLayout(taxTotalPanel, BoxLayout.Y_AXIS));
         taxTotalPanel.add(subtotalField);
         taxTotalPanel.add(taxField);
-
+        taxTotalPanel.add(discountAmountField);
         taxTotalPanel.add(totalField);
         taxTotalPanel.setBackground(Color.YELLOW);
         this.add(taxTotalPanel, BorderLayout.PAGE_END);
@@ -58,5 +59,17 @@ public class ReceiptPanel extends JPanel {
     public void updateTotal(double newTotal) {
         this.totalField.setText("Total: $" + newTotal);
 
+    }
+
+    public JLabel getTotalField() {
+        return this.totalField;
+    }
+
+    public void updateDiscountAmount(double newDiscountAmount ) {
+        this.discountAmountField.setText("Discount Amount: $" + newDiscountAmount);
+    }
+
+    public JLabel getDiscountAmountField() {
+        return this.discountAmountField;
     }
 }

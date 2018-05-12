@@ -66,6 +66,8 @@ public class Presenter {
                     containerPanel.getReceiptPanel().addItemToReceipt(taco);
                     containerPanel.getReceiptPanel().updateSubtotal(firstOrder.getSubtotal());
                     containerPanel.getReceiptPanel().updateTax(firstOrder.getSubtotal() * firstOrder.getTaxRate());
+                    containerPanel.getReceiptPanel().updateDiscountAmount(firstOrder.getDiscountAmount());
+                    containerPanel.getReceiptPanel().updateTotal(firstOrder.getTotal());
                     break;
                     default:
                         System.err.println("Command not recognized");
