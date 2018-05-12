@@ -3,6 +3,11 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.*;
 
+import javax.swing.*;
+import javax.swing.border.Border;
+
+import java.awt.*;
+
 import static org.junit.Assert.assertEquals;
 
 public class ReceiptPanelTest {
@@ -19,10 +24,10 @@ public class ReceiptPanelTest {
         assertEquals("Receipt Panel", receiptPanel.getName()); }
 
     @Test
-    public void testPanelHasTextArea() {
-        assertEquals("ReceiptPanelTextArea", receiptPanel.getComponents()[1].getName());
-
+    public void pannelHasText () {
+        JLabel nameLabel = (JLabel) receiptPanel.getComponents()[0];
+        assertEquals("Customer Name", nameLabel.getText());
+        assertEquals(BoxLayout.Y_AXIS,((BoxLayout)receiptPanel.getLayout()).getAxis());
     }
-
 
 }
