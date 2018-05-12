@@ -57,7 +57,16 @@ public class PresenterTest {
 
     @Test
     public void testSubtotalUpdatesOnItemsAdd() {
-        fail("Update functionality has not been added yet");
+       JButton tacoButton = ((ContainerPanel) presenter.getCurrentScreen()).getMenuItemPanel().getTacoButton();
+       tacoButton.doClick();
+       assertEquals("Subtotal: $3.0", ((ContainerPanel) presenter.getCurrentScreen()).getReceiptPanel().getSubtotalField().getText());
+    }
+
+    @Test
+    public void testTaxUpdatesOnItemAdd() {
+        JButton tacoButton = ((ContainerPanel) presenter.getCurrentScreen()).getMenuItemPanel().getTacoButton();
+        tacoButton.doClick();
+        assertEquals("Tax: $0.18", ((ContainerPanel) presenter.getCurrentScreen()).getReceiptPanel().getTaxField().getText());
     }
 
 /*    @Test

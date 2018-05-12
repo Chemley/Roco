@@ -30,4 +30,18 @@ public class ReceiptPanelTest {
         assertEquals(BoxLayout.Y_AXIS,((BoxLayout)receiptPanel.getLayout()).getAxis());
     }
 
+    @Test
+    public void subtotalUpdatesAsItemsAdded() {
+        ReceiptPanel receiptPanel = new ReceiptPanel();
+        receiptPanel.updateSubtotal(3.00);
+        assertEquals("Subtotal: $3.00", ((JLabel) receiptPanel.getComponents()[1]).getText());
+    }
+
+    @Test
+    public void testTaxUpdatesAsItemsAdded() {
+        receiptPanel.updateTax(0.18);
+        assertEquals("Tax: $0.18", ((JLabel) receiptPanel.getComponents()[2]).getText());
+    }
+
+
 }

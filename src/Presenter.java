@@ -64,6 +64,8 @@ public class Presenter {
                 case "AddTaco":
                     firstOrder.addItem(new Taco());
                     containerPanel.getReceiptPanel().addItemToReceipt(taco);
+                    containerPanel.getReceiptPanel().updateSubtotal(firstOrder.getSubtotal());
+                    containerPanel.getReceiptPanel().updateTax(firstOrder.getSubtotal() * firstOrder.getTaxRate());
                     break;
                     default:
                         System.err.println("Command not recognized");

@@ -7,6 +7,7 @@ import java.util.LinkedList;
 public class Order {
 
 
+
     /**
      * Receipt takes care of subtotal, total.
      */
