@@ -9,6 +9,8 @@ import java.awt.*;
 public class ReceiptPanel extends JPanel {
     JLabel subtotalField = new JLabel("Subtotal: $0.00");
     JLabel taxField = new JLabel("Tax: $0.00");
+    JPanel itemsList = new JPanel();
+    JPanel taxTotalPanel = new JPanel();
 
     public ReceiptPanel() {
         this.setName("Receipt Panel");
@@ -16,8 +18,13 @@ public class ReceiptPanel extends JPanel {
         this.setBackground(Color.CYAN);
         JLabel receiptLabel = new JLabel("Customer Name");
         this.add(receiptLabel, BorderLayout.PAGE_START);
-        this.add(subtotalField, BorderLayout.PAGE_END);
-        this.add(taxField, BorderLayout.PAGE_END);
+        taxTotalPanel.setLayout(new BoxLayout(taxTotalPanel, BoxLayout.Y_AXIS));
+        taxTotalPanel.add(taxField);
+        taxTotalPanel.add(subtotalField);
+        taxTotalPanel.setBackground(Color.YELLOW);
+        this.add(taxTotalPanel, BorderLayout.PAGE_END);
+        this.add(itemsList, BorderLayout.CENTER);
+        itemsList.setLayout(new BoxLayout(itemsList, BoxLayout.Y_AXIS));
 
 
 
@@ -27,7 +34,7 @@ public class ReceiptPanel extends JPanel {
     public void addItemToReceipt(Taco taco) {
         String labelString = taco.toString() + " $" + taco.getUnitPrice();
         JLabel newLabel = new JLabel(labelString);
-        this.add(newLabel, BorderLayout.CENTER);
+        itemsList.add(newLabel);
         this.revalidate();
     }
 
