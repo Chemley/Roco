@@ -18,5 +18,11 @@ public class ReceiptPanelTest {
     public void nameOfOrderScreenGrid() {
         assertEquals("Receipt Panel", receiptPanel.getName()); }
 
+    @Test
+    public void testPanelHasTextArea() {
+        assertEquals("ReceiptPanelTextArea", receiptPanel.getComponents()[1].getName());
+
+    }
+
 
 }

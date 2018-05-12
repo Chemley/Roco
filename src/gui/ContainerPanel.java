@@ -16,4 +16,15 @@ public class ContainerPanel extends JPanel {
         this.add(receiptPanel);
     }
 
+    public JButton getTacoButton() {
+        return menuItemPanel.getTacoButton();
+    }
+
+    public MenuItemPanel getMenuItemPanel() {
+        return this.menuItemPanel;
+    }
+
+    public ReceiptPanel getReceiptPanel() {
+        return this.receiptPanel;
+    }
 }

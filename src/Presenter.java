@@ -1,9 +1,7 @@
-import gui.MenuItemPanel;
-import gui.TacoTruck;
-import gui.TacoTruckWelcomePanel;
+import gui.*;
 import model.Cashier;
-import gui.ContainerPanel;
 import model.Order;
+import model.Taco;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,16 +13,21 @@ public class Presenter {
     private final ContainerPanel containerPanel;
     private TacoTruck view;
     private Cashier model;
+    public Order firstOrder;
 
     public Presenter(TacoTruck view, Cashier model) {
         this.view = view;
         this.model = model;
+        firstOrder = new Order("Unknown Customer");
+        this.model.addOrder(firstOrder);
         this.containerPanel = new ContainerPanel();
-        setUp();
+        initializePresenter();
+        JButton tacoButton = ((ContainerPanel) getCurrentScreen()).getMenuItemPanel().getTacoButton();
+        tacoButton.setActionCommand("AddTaco");
+        tacoButton.addActionListener(new ItemButtonActionListener());
     }
 
-    private void setUp(){
-
+    private void initializePresenter(){
         setCurrentScreen(containerPanel);
     }
 
@@ -41,11 +44,6 @@ public class Presenter {
         return view.getContentPane();
     }
 
-    public static void main(String[] args) {
-        new Presenter(new TacoTruck(), new Cashier());
-    }
-
-
     private class StartButtonActionListener implements ActionListener{
 
         @Override
@@ -53,4 +51,29 @@ public class Presenter {
             setCurrentScreen(new TacoTruckWelcomePanel());
         }
     }
+
+    private class ItemButtonActionListener implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent ae) {
+            Taco taco = new Taco();
+            String actionCommand = ae.getActionCommand();
+            switch (actionCommand) {
+                case "AddTacoWGuac":
+                    taco.addGuacamole();
+                case "AddTaco":
+                    firstOrder.addItem(new Taco());
+                    containerPanel.getReceiptPanel().addItemToReceipt(taco);
+                    break;
+                    default:
+                        System.err.println("Command not recognized");
+            }
+        }
+
+    }
+
+    public static void main(String[] args) {
+        new Presenter(new TacoTruck(), new Cashier());
+    }
+
 }
