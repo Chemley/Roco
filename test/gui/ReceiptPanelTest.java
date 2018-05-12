@@ -34,13 +34,19 @@ public class ReceiptPanelTest {
     public void subtotalUpdatesAsItemsAdded() {
         ReceiptPanel receiptPanel = new ReceiptPanel();
         receiptPanel.updateSubtotal(3.00);
-        assertEquals("Subtotal: $3.00", ((JLabel) receiptPanel.getComponents()[1]).getText());
+        assertEquals("Subtotal: $3.0", ((JLabel) receiptPanel.taxTotalPanel.getComponents()[0]).getText());
     }
 
     @Test
     public void testTaxUpdatesAsItemsAdded() {
         receiptPanel.updateTax(0.18);
-        assertEquals("Tax: $0.18", ((JLabel) receiptPanel.getComponents()[2]).getText());
+        assertEquals("Tax: $0.18", ((JLabel) receiptPanel.taxTotalPanel.getComponents()[1]).getText());
+    }
+
+    @Test
+    public void totalUpdatesAsItemsAreAdded() {
+        receiptPanel.updateTotal(3.18);
+        assertEquals("Total: $3.18", ((JLabel) receiptPanel.taxTotalPanel.getComponents()[2]).getText());
     }
 
 
