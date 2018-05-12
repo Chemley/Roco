@@ -10,10 +10,11 @@ public class ContainerPanel extends JPanel {
 
     public ContainerPanel () {
         this.setName("Container Panel");
+        this.setLayout(new BorderLayout());
         this.menuItemPanel = new MenuItemPanel();
-        this.add(menuItemPanel);
+        this.add(menuItemPanel, BorderLayout.WEST);
         this.receiptPanel = new ReceiptPanel();
-        this.add(receiptPanel);
+        this.add(receiptPanel, BorderLayout.CENTER);
     }
 
     public JButton getTacoButton() {

@@ -26,7 +26,7 @@ public class ReceiptPanel extends JPanel {
 
 
     public void addItemToReceipt(Taco taco) {
-        String labelString = taco.toString() + " $(PRICE GOES HERE?)";
+        String labelString = taco.toString() + " $" + taco.getUnitPrice();
         JLabel newLabel = new JLabel(labelString);
         itemsListing.add(newLabel);
         this.revalidate();

@@ -2,6 +2,7 @@ package gui;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.GridLayout;
 
 
 public class MenuItemPanel extends JPanel {
@@ -12,8 +13,9 @@ public class MenuItemPanel extends JPanel {
         this.setName("Menu Item Panel");
         this.tacoButton.setName("Taco Button");
         this.tacoButton.setText("Taco Button");
-        this.add(tacoButton);
+        this.add(tacoButton, 0, 0);
         this.setBackground(Color.BLACK);
+        this.setLayout(new GridLayout(2, 2));
     }
 
     public JButton getTacoButton() {
