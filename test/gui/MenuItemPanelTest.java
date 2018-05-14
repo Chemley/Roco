@@ -1,12 +1,11 @@
 package gui;
-import gui.MenuItemPanel;
+
 import org.junit.Before;
 import org.junit.Test;
 
-import javax.swing.*;
-
 import static org.junit.Assert.*;
 
+import javax.swing.*;
 
 public class MenuItemPanelTest {
 
@@ -17,18 +16,23 @@ public class MenuItemPanelTest {
         menuItemPanel = new MenuItemPanel();
     }
 
+    /**
+     * Test to make sure menu item panel has the proper name
+     */
     @Test
-    public void nameOfMenuItemPanel() {
-        assertEquals("Menu Item Panel",menuItemPanel.getName());
-
+    public void testNameOfMenuItemPanel() {
+        assertEquals("MenuItemPanel", menuItemPanel.getName());
     }
 
+    /**
+     * Test to make sure the proper taco button is attached to the MenuItemPanel
+     */
     @Test
-    public void addTacoButton(){
+    public void testAddTacoButton(){
         JButton tacoButton = ((JButton) menuItemPanel.getComponents()[0]);
         assertEquals(tacoButton, menuItemPanel.getTacoButton());
-        assertEquals("Taco Button", tacoButton.getName());
-        assertEquals("Taco Button", tacoButton.getText());
+        assertEquals("TacoButton", tacoButton.getName());
+        assertEquals("Taco", tacoButton.getText());
     }
 
 }

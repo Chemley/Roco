@@ -1,5 +1,5 @@
 package gui;
-import gui.TacoTruck;
+
 import org.junit.Test;
 
 import javax.swing.*;
@@ -16,7 +16,6 @@ public class TacoTruckTest {
         assertEquals(JFrame.EXIT_ON_CLOSE,tacoTruck.getDefaultCloseOperation());
         assertEquals(900,tacoTruck.getWidth());
         assertEquals(300,tacoTruck.getHeight());
-
     }
 
 }

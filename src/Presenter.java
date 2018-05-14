@@ -69,8 +69,8 @@ public class Presenter {
                     containerPanel.getReceiptPanel().updateDiscountAmount(firstOrder.getDiscountAmount());
                     containerPanel.getReceiptPanel().updateTotal(firstOrder.getTotal());
                     break;
-                    default:
-                        System.err.println("Command not recognized");
+                default:
+                    System.err.println("Command not recognized");
             }
         }
 
