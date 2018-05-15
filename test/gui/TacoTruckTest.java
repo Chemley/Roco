@@ -11,6 +11,7 @@ public class TacoTruckTest {
     @Test
     public void tacoTruck_initialState(){
         TacoTruck tacoTruck = new TacoTruck();
+        tacoTruck.init();
         assertEquals("Taco Truck!",tacoTruck.getTitle());
         assertTrue(tacoTruck.isVisible());
         assertEquals(JFrame.EXIT_ON_CLOSE,tacoTruck.getDefaultCloseOperation());

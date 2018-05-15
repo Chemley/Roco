@@ -17,6 +17,7 @@ public class Presenter {
 
     public Presenter(TacoTruck view, Cashier model) {
         this.view = view;
+        this.view.init();
         this.model = model;
         firstOrder = new Order("Unknown Customer");
         this.model.addOrder(firstOrder);

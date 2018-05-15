@@ -1,7 +1,6 @@
 
 import gui.ContainerPanel;
-import gui.MenuItemPanel;
-import gui.ReceiptPanel;
+import gui.MockTacoTruck;
 import gui.TacoTruck;
 import model.Cashier;
 import org.junit.Before;
@@ -16,10 +15,16 @@ import static org.junit.Assert.*;
 public class PresenterTest {
 
     private Presenter presenter;
+    private MockTacoTruck mockView = new MockTacoTruck();
 
     @Before
     public void setUp(){
-        presenter = new Presenter(new TacoTruck(), new Cashier());
+        presenter = new Presenter(mockView, new Cashier());
+    }
+
+    @Test
+    public void initializesTacoTruck() {
+        assertTrue(mockView.wasInitCalled());
     }
 
     @Test
